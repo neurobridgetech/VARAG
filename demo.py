@@ -25,13 +25,13 @@ shared_db = lancedb.connect("~/rag_demo_db")
 
 # Initialize embedding models
 # text_embedding_model = SentenceTransformer("all-MiniLM-L6-v2", trust_remote_code=True)
-text_embedding_model = SentenceTransformer("BAAI/bge-base-en", trust_remote_code=True)
+text_embedding_model = SentenceTransformer("BAAI/bge-m3", trust_remote_code=True)
 # text_embedding_model = SentenceTransformer("BAAI/bge-large-en-v1.5", trust_remote_code=True)
 # text_embedding_model = SentenceTransformer("BAAI/bge-small-en-v1.5", trust_remote_code=True)
 image_embedding_model = SentenceTransformer(
-    "jinaai/jina-clip-v1", trust_remote_code=True
+    "jinaai/jina-clip-v2", trust_remote_code=True
 )
-colpali_model, colpali_processor = get_model_colpali("vidore/colpali-v1.2")
+colpali_model, colpali_processor = get_model_colpali("vidore/colpali-v1.3")
 
 # Initialize RAG instances
 simple_rag = SimpleRAG(
